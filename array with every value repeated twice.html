@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> Repeted array </title>
+    </head>
+    <body>
+        <button> Press Inspect </button>
+        <script>
+            function arrayDouble (array) {
+                let strArray = [];
+
+                array.forEach ( function (string)
+                    {
+                        strArray.push(string);
+                        strArray.push(string);
+
+
+                    }
+                );
+                console.log(strArray);
+            }
+            arrayDouble(['Ringing','Calling']);
+
+        </script>
+    </body>
+</html>

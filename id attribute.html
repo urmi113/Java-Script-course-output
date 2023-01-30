@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> My todo App </title>
+    </head>
+
+    <body>
+        <input  id="todoTitle"    type="text" />
+        
+        <button onclick="addTodo()">Add Todo </button>
+        <div id="todo-list"></div>
+        <script>
+            
+
+            let todos = ['Get Groceries','Wash the Car','Make todays Dinner'];
+
+
+            render();
+            
+
+
+           function addTodo(){
+            let textbox = document.getElementById('todoTitle');
+            let title = textbox.value;
+            todos.push(title);
+
+            render();
+
+           }
+           function render(){
+            // reset my list//
+            document.getElementById('todo-list').innerHTML = '';
+
+            todos.forEach(
+            function (todoTitle) {
+                    let element = document.createElement('div');
+                    element.innerText = todoTitle;
+                    let todoLlist = document.getElementById('todo-list');
+                    todoLlist.appendChild(element);
+
+           }
+           );
+
+           }
+
+     
+        </script>
+    </body>
+</html>
